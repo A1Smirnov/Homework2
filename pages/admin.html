@@ -51,7 +51,7 @@
             border: none;
             float:right;
         } 
-        /* 
+        
         .navbar .nav-item .nav-link {
             color: #fff;
         }
@@ -83,7 +83,46 @@
         .navbar .user-profile {
             color: #fff;
         }
-*/
+
+/* ALIGNMENT FOR DASHBOARD ROW */
+
+        .row {
+            display: flex; /* Включаем flexbox для строки */
+            flex-wrap: wrap; /* Обеспечиваем перенос для колонок на маленьких экранах */
+        }
+
+        .col-md-3 {
+            display: flex;
+            flex-direction: column; /* Устанавливаем вертикальное направление для содержимого колонок */
+        }
+
+        .card {
+            flex: 1; /* Заставляем все карточки заполнять всю доступную высоту */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Выравниваем содержимое карточки по центру */
+        }
+
+  /* ALIGNMENT FOR SECOND ROW DASHBOARD */
+
+          .col-md-8, .col-md-4 {
+            display: flex;
+            flex-direction: column; /* Колонки располагают элементы вертикально */
+        }
+
+        .chart-container {
+            flex: 1; /* Заставляем контейнеры заполнять всю доступную высоту */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Центрируем содержимое по вертикали */
+        }
+
+        canvas {
+            max-width: 100%; /* Чтобы графики не выходили за границы контейнера */
+            height: auto; /* Автоматическое подстраивание высоты */
+        }
+
+/* SEARCH BUTTON */
 
   </style>
 </head>
@@ -137,17 +176,52 @@
         </div>
       </nav> -->
 
-      <nav class="navbar navbar-expand-lg navbar-dark">
+<!-- ANOTHER TRY -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <form class="search-form d-flex mr-auto">
+          <input class="form-control" type="search" placeholder="Search for..." aria-label="Search">
+          <button class="btn btn-search" type="submit">
+              <i class="fas fa-search"></i>
+          </button>
+      </form>
+
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link icon-badge" href="#">
+                  <i class="fas fa-bell"></i>
+                  <span>3+</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link icon-badge" href="#">
+                  <i class="fas fa-envelope"></i>
+                  <span>7</span>
+              </a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link user-profile" href="#">
+                  Douglas McGee
+                  <img src="https://via.placeholder.com/30" class="rounded-circle" alt="User Profile">
+              </a>
+          </li>
+      </ul>
+  </div>
+</nav>
+
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <!-- Search Bar -->
             <form class="form-inline mr-auto">
                 <input class="form-control" type="search" placeholder="Search for..." aria-label="Search">
-                <button class="btn btn-search" type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
+
             </form>
-    
-            <!-- Notifications and Messages -->
+
+            <button class="btn btn-search" type="submit">
+              <i class="fas fa-search"></i>
+        </button>
+
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link icon-badge" href="#">
@@ -161,8 +235,7 @@
                         <span>7</span>
                     </a>
                 </li>
-    
-                <!-- User Profile -->
+
                 <li class="nav-item">
                     <a class="nav-link user-profile" href="#">
                         Douglas McGee
@@ -170,10 +243,10 @@
                     </a>
                 </li>
             </ul>
-    
-
         </div>
-    </nav>
+     </nav> -->
+
+
           <div class="col-12 container-fluid">
             <div class="dashboard2">
               <table class="table">
