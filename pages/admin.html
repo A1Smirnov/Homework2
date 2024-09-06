@@ -38,6 +38,53 @@
     .progress-bar {
       background-color: #17a2b8;
     }
+
+/* Styles for navigation bar */
+
+        .navbar {
+            background-color: #202124; 
+        }
+
+        .btn-generate-report {
+            color: #fff;
+            background-color: #3b5bdb;
+            border: none;
+            float:right;
+        } 
+        /* 
+        .navbar .nav-item .nav-link {
+            color: #fff;
+        }
+        .navbar .form-inline input {
+            background-color: #333;
+            border: none;
+            color: #fff;
+        }
+        .navbar .form-inline input::placeholder {
+            color: #ccc;
+        }
+        .navbar .btn-search {
+            background-color: #3b3f43;
+            border: none;
+        }
+        .navbar .icon-badge {
+            color: #fff;
+            position: relative;
+        }
+        .navbar .icon-badge span {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background-color: red;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+        .navbar .user-profile {
+            color: #fff;
+        }
+*/
+
   </style>
 </head>
 <body>
@@ -51,6 +98,9 @@
           <a href="#" class="nav-link text-white">
             <i class="bi bi-house"></i> Dashboard
           </a>
+
+
+
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link text-white">Components</a>
@@ -70,10 +120,12 @@
       </ul>
     </nav>
 
+
+    
     <!-- Main Content -->
     <div class="flex-grow-1 p-3">
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark">
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
           <form class="d-flex ms-auto">
             <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
@@ -83,41 +135,90 @@
             <i class="bi bi-person-circle"></i>
           </div>
         </div>
-      </nav>
+      </nav> -->
 
-      <!-- Dashboard Content -->
-      <div class="container-fluid">
-        <h2 class="my-4">Dashboard</h2>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <!-- Search Bar -->
+            <form class="form-inline mr-auto">
+                <input class="form-control" type="search" placeholder="Search for..." aria-label="Search">
+                <button class="btn btn-search" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+    
+            <!-- Notifications and Messages -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link icon-badge" href="#">
+                        <i class="fas fa-bell"></i>
+                        <span>3+</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link icon-badge" href="#">
+                        <i class="fas fa-envelope"></i>
+                        <span>7</span>
+                    </a>
+                </li>
+    
+                <!-- User Profile -->
+                <li class="nav-item">
+                    <a class="nav-link user-profile" href="#">
+                        Douglas McGee
+                        <img src="https://via.placeholder.com/30" class="rounded-circle" alt="User Profile">
+                    </a>
+                </li>
+            </ul>
+    
 
-        <!-- Stats -->
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card text-center p-3">
-              <h5>Earnings (Monthly)</h5>
-              <h2>$40,000</h2>
+        </div>
+    </nav>
+          <div class="col-12 container-fluid">
+            <div class="dashboard2">
+              <table class="table">
+                <tbody>
+                    <tr>
+                        <td>              <h2 class="my-4" style="color:white">Dashboard</h2>
+                        </td>
+                        <td>
+                          <button class="btn btn-generate-report">Generate Report</button>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>        
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card text-center p-3">
-              <h5>Earnings (Annual)</h5>
-              <h2>$215,000</h2>
+           </div>
+          <!-- Stats -->
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card text-center p-3">
+                <h5>Earnings (Monthly)</h5>
+                <h2>$40,000</h2>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card text-center p-3">
-              <h5>Tasks</h5>
-              <div class="progress" style="height: 10px;">
-                <div class="progress-bar" role="progressbar" style="width: 50%;">50%</div>
+            <div class="col-md-3">
+              <div class="card text-center p-3">
+                <h5>Earnings (Annual)</h5>
+                <h2>$215,000</h2>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card text-center p-3">
+                <h5>Tasks</h5>
+                <div class="progress" style="height: 10px;">
+                  <div class="progress-bar" role="progressbar" style="width: 50%;">50%</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card text-center p-3">
+                <h5>Pending Requests</h5>
+                <h2>18</h2>
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card text-center p-3">
-              <h5>Pending Requests</h5>
-              <h2>18</h2>
-            </div>
-          </div>
-        </div>
+          
 
         <!-- Charts -->
         <div class="row">
