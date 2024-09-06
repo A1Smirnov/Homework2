@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .profile-card {
+      background-color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .profile-card img {
+      border-radius: 50%;
+      width: 100px;
+      margin-bottom: 20px;
+    }
+    .social-links i {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+    .project-status .progress-bar {
+      background-color: #0d6efd;
+    }
+    .progress-title {
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .tr-no-border td {
+        border-bottom:none;
+    }
+    table td {
+    vertical-align: middle;
+}
+
+  </style>
+
+</head>
+<body>
+
+  <div class="container mt-5">
+    <!-- Container on full width * Breadcrumbs -->
+    <div class="container mt-4">
+        <!-- <div class="row"> -->
+          <div class="profile-card">
+            <div class="col-12 green-box">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb" style="margin-bottom: 0px;">
+                      <li class="breadcrumb-item"><a href="#" style="text-decoration: none;">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#" style="text-decoration: none;">User</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+                    </ol>
+                  </nav>
+            </div>
+        </div>
+
+        <!-- HERE IS LAYOUT TESTING -->
+<!-- 
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-4 orange-box"></div>
+        <div class="col-md-8 blue-box"></div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-4 gray-box"></div>
+        <div class="col-md-4 purple-box"></div>
+        <div class="col-md-4 red-box"></div>
+    </div> -->
+        <!-- UP IS LAYOUT TESTING -->
+<br>
+
+    <div class="row">
+      <!-- Profile Info -->
+      <div class="col-md-4">
+        <div class="profile-card text-center">
+          <img src="../images/profile-pic.jpg" alt="Profile Image">
+          <h3>John Smith</h3>
+          <p class="text-muted">Full Stack Developer</p>
+          <p>Bay Area, San Francisco, CA</p>
+          <button class="btn btn-primary me-2">Follow</button>
+          <button class="btn btn-outline-secondary">Message</button>
+
+
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-8">
+        <div class="profile-card">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><h5>Full Name</h5></td>
+                        <td><p>Johnatan Smith</p></td>
+                    </tr>
+                    <tr>
+                        <td><h5>Email</h5></td>
+                        <td><p>example@example.com</p></td>
+                    </tr>
+                    <tr>
+                        <td><h5>Phone</h5></td>
+                        <td><p>(097) 234-5678</p></td>
+                    </tr>
+                    <tr>
+                        <td><h5>Mobile</h5></td>
+                        <td><p>(098) 765-4321</p></td>
+                    </tr>
+                    <tr class="tr-no-border">
+                        <td><h5>Address</h5></td>
+                        <td><p>Bay Area, San Francisco, CA</p></td>
+                    </tr>
+                </tbody>
+            </table>
+
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <!-- Project Status Cards -->
+
+
+        <div class="col-md-4">
+          <!-- Social Links -->
+            <div class="profile-card">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><h5>ICON</h5></td>
+                            <td style="text-align: right;"><p>mdbootstrap.com</p></td>
+                        </tr>
+                        <tr>
+                            <td><h5>ICON</h5></td>
+                            <td style="text-align: right;"><p>mdbootstrap</p></td>
+                        </tr>
+                        <tr>
+                            <td><h5>ICON</h5></td>
+                            <td style="text-align: right;"><p>@mdbootstrap</p></td>
+                        </tr>
+                        <tr>
+                            <td><h5>ICON</h5></td>
+                            <td style="text-align: right;"><p>mdbootstrap</p></td>
+                        </tr>
+                        <tr class="tr-no-border">
+                            <td><h5>ICON</h5></td>
+                            <td style="text-align: right;"><p>mdbootstrap</p></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+      <div class="col-md-4">
+        <div class="profile-card">
+          <h5 class="mb-3"><a href=# style="text-decoration: none;">Assignment</a>: Project Status</h5>
+
+          <div class="mb-3">
+            <span class="progress-title">Web Design</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 80%;">80%</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <span class="progress-title">Website Markup</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 72%;">72%</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <span class="progress-title">One Page</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 60%;">60%</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <span class="progress-title">Mobile Template</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 55%;">55%</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <span class="progress-title">Backend API</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 48%;">48%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="profile-card">
+          <h5 class="mb-3"><a href=# style="text-decoration: none;">Assignment</a>: Project Status</h5>
+
+          <div class="mb-3">
+            <span class="progress-title">Web Design</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 80%;">80%</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <span class="progress-title">Website Markup</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 72%;">72%</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <span class="progress-title">One Page</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 60%;">60%</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <span class="progress-title">Mobile Template</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 55%;">55%</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <span class="progress-title">Backend API</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 48%;">48%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap & Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"></script>
+</body>
+</html>

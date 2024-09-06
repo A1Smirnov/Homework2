@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1e1e2f;
+      color: #fff;
+    }
+    .sidebar {
+      background-color: #2e59d9;
+      height: 100vh;
+    }
+    .sidebar a {
+      color: #fff;
+    }
+    .card {
+      background-color: #2c2f33;
+      border: none;
+      margin-bottom: 1.5rem;
+    }
+    .chart-container {
+      background-color: #2c2f33;
+      border-radius: .5rem;
+    }
+    .navbar {
+      background-color: #1e1e2f;
+    }
+    .navbar .btn {
+      color: #fff;
+    }
+    .nav-profile {
+      color: #fff;
+    }
+    .progress-bar {
+      background-color: #17a2b8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="d-flex">
+    <nav class="sidebar p-3">
+      <h4 class="text-white">Admin SB</h4>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white">
+            <i class="bi bi-house"></i> Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white">Components</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white">Utilities</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white">Pages</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white">Charts</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white">Tables</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex-grow-1 p-3">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <form class="d-flex ms-auto">
+            <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
+          </form>
+          <div class="nav-profile d-flex align-items-center">
+            <span class="me-2">Are You Winning Son?</span>
+            <i class="bi bi-person-circle"></i>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Dashboard Content -->
+      <div class="container-fluid">
+        <h2 class="my-4">Dashboard</h2>
+
+        <!-- Stats -->
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card text-center p-3">
+              <h5>Earnings (Monthly)</h5>
+              <h2>$40,000</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center p-3">
+              <h5>Earnings (Annual)</h5>
+              <h2>$215,000</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center p-3">
+              <h5>Tasks</h5>
+              <div class="progress" style="height: 10px;">
+                <div class="progress-bar" role="progressbar" style="width: 50%;">50%</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center p-3">
+              <h5>Pending Requests</h5>
+              <h2>18</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="row">
+          <div class="col-md-8">
+            <div class="chart-container p-3">
+              <h5>Earnings Overview</h5>
+              <canvas id="earningsChart"></canvas>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="chart-container p-3">
+              <h5>Revenue Sources</h5>
+              <canvas id="revenueChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap & Charts.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Charts Data -->
+  <script>
+    const ctx = document.getElementById('earningsChart').getContext('2d');
+    const earningsChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Mar', 'May', 'Jul', 'Sep', 'Nov'],
+        datasets: [{
+          label: 'Earnings',
+          data: [0, 10000, 15000, 25000, 30000, 40000],
+          borderColor: 'rgb(75, 192, 192)',
+          tension: 0.1
+        }]
+      }
+    });
+
+    const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+    const revenueChart = new Chart(revenueCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Direct', 'Social', 'Referral'],
+        datasets: [{
+          data: [55, 30, 15],
+          backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc']
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
